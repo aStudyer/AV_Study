@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ImageUtils : NSObject
 
 //定义方法:处理图片
-+ (UIImage *)opencvImage:(UIImage *)image;
++ (UIImage *)opencvImage:(UIImage *)image level:(int)level;
 
 @end
 

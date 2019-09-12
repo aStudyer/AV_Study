@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sJe-Fm-dRa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Day01-->
+        <scene sceneID="g8e-xD-tHy">
+            <objects>
+                <viewController id="sJe-Fm-dRa" customClass="day01" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sh4-4k-5hY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Test.png" translatesAutoresizingMaskIntoConstraints="NO" id="kqa-zH-jUI">
+                                <rect key="frame" x="37.5" y="50" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7zI-st-F7i"/>
+                                    <constraint firstAttribute="width" secondItem="kqa-zH-jUI" secondAttribute="height" multiplier="1:1" id="t1o-JO-iZA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxK-d1-4lq">
+                                <rect key="frame" x="50" y="400" width="100" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="原始图片"/>
+                                <connections>
+                                    <action selector="originImg:" destination="sJe-Fm-dRa" eventType="touchUpInside" id="8Tc-dk-Eke"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLj-Te-urQ">
+                                <rect key="frame" x="225" y="400" width="100" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FD0-31-dOs"/>
+                                    <constraint firstAttribute="height" constant="36" id="MBQ-iN-z5q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="马赛克图片"/>
+                                <connections>
+                                    <action selector="mosaicImg:" destination="sJe-Fm-dRa" eventType="touchUpInside" id="ICQ-0h-bPZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GU1-5B-cPv" firstAttribute="trailing" secondItem="GLj-Te-urQ" secondAttribute="trailing" constant="50" id="5fj-QC-Tp9"/>
+                            <constraint firstItem="GLj-Te-urQ" firstAttribute="top" secondItem="kqa-zH-jUI" secondAttribute="bottom" constant="50" id="7OS-zD-E2r"/>
+                            <constraint firstItem="IxK-d1-4lq" firstAttribute="leading" secondItem="GU1-5B-cPv" secondAttribute="leading" constant="50" id="Frk-DF-fWI"/>
+                            <constraint firstItem="IxK-d1-4lq" firstAttribute="centerY" secondItem="GLj-Te-urQ" secondAttribute="centerY" id="IQq-gB-AJs"/>
+                            <constraint firstItem="kqa-zH-jUI" firstAttribute="top" secondItem="GU1-5B-cPv" secondAttribute="top" constant="30" id="VtQ-Km-hhB"/>
+                            <constraint firstItem="kqa-zH-jUI" firstAttribute="centerX" secondItem="sh4-4k-5hY" secondAttribute="centerX" id="Wgv-c2-ryQ"/>
+                            <constraint firstItem="IxK-d1-4lq" firstAttribute="width" secondItem="GLj-Te-urQ" secondAttribute="width" id="flR-or-21X"/>
+                            <constraint firstItem="IxK-d1-4lq" firstAttribute="height" secondItem="GLj-Te-urQ" secondAttribute="height" id="nMM-a2-iKj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GU1-5B-cPv"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="kqa-zH-jUI" id="PAg-MD-3Ij"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4wj-O9-BFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="-261.31934032983509"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Test.png" width="512" height="512"/>
+    </resources>
+</document>

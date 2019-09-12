@@ -6,11 +6,11 @@
 //  Copyright © 2019 aStudyer. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "BaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface day01 : BaseTableViewController
+@interface day01 : BaseViewController
 
 @end
 
