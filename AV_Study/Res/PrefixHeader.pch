@@ -9,7 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+//#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 
 #import "HCKeyPath.h"
 
@@ -68,12 +68,5 @@ dispatch_async(dispatch_get_main_queue(), block);\
 [[NSUserDefaults standardUserDefaults] synchronize]
 
 #define HC_GetValueForKey(key) [[NSUserDefaults standardUserDefaults] valueForKey:key]
-
-// 自定义Log
-#ifdef  DEBUG
-#define NSLog(FORMAT, ...) fprintf(stderr,"<%s:%d thread:%s> %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [NSThread isMainThread] ? "main" : [[NSThread currentThread].name UTF8String], [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
-#else
-#define NSLog(...)
-#endif
 
 #endif /* PrefixHeader_pch */
